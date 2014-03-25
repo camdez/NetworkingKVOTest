@@ -14,11 +14,15 @@
 + (void)run {
   NSURLSession *session = [NSURLSession sharedSession];
 
+  __block BOOL done = NO;
+
   NSURLSessionDataTask *task = [session dataTaskWithURL:[NSURL URLWithString:@"http://camdez.com"] completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
     if (error) {
       NSLog(@"An error occurred: %@", error.localizedDescription);
+      done = YES;
     } else {
       NSLog(@"Success");
+      done = YES;
     }
   }];
 
@@ -27,7 +31,10 @@
 
   [task resume];
 
-  sleep(5);
+  while (!done) {
+    [[NSRunLoop currentRunLoop] runMode:NSDefaultRunLoopMode
+                             beforeDate:[NSDate date]];
+  }
 
   [task removeObserver:activityLogger forKeyPath:NSStringFromSelector(@selector(state))];
 }
