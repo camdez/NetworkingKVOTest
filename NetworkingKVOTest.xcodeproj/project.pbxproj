@@ -52,7 +52,9 @@
 				C126CF3C18E22224008E9EF9 /* Frameworks */,
 				C126CF3B18E22224008E9EF9 /* Products */,
 			);
+			indentWidth = 2;
 			sourceTree = "<group>";
+			tabWidth = 2;
 		};
 		C126CF3B18E22224008E9EF9 /* Products */ = {
 			isa = PBXGroup;
