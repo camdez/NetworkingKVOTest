@@ -16,7 +16,7 @@
 
   __block BOOL done = NO;
 
-  NSURLSessionDataTask *task = [session dataTaskWithURL:[NSURL URLWithString:@"http://camdez.com"] completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+  NSURLSessionDataTask *task = [session dataTaskWithURL:[NSURL URLWithString:@"http://fuzzy-octo-bear.herokuapp.com/movies"] completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
     if (error) {
       NSLog(@"An error occurred: %@", error.localizedDescription);
       done = YES;

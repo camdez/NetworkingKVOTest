@@ -18,11 +18,10 @@
   __block BOOL done = NO;
 
   NSURLSessionDataTask *task = [sessionManager GET:@"http://fuzzy-octo-bear.herokuapp.com/movies" parameters:@{} success:^(NSURLSessionDataTask *task, id responseObject) {
-    NSLog(@"Success: %@", task);
+    NSLog(@"Success");
     done = YES;
   } failure:^(NSURLSessionDataTask *task, NSError *error) {
-    NSHTTPURLResponse *response = (NSHTTPURLResponse *)task.response;
-    NSLog(@"Failure (%ld): %@", (long)response.statusCode, error.localizedDescription);
+    NSLog(@"An error occurred: %@", error.localizedDescription);
     done = YES;
   }];
 
