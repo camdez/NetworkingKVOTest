@@ -10,6 +10,7 @@
 		C126CF3E18E22224008E9EF9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C126CF3D18E22224008E9EF9 /* Foundation.framework */; };
 		C126CF4118E22224008E9EF9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C126CF4018E22224008E9EF9 /* main.m */; };
 		C126CF4518E22224008E9EF9 /* NetworkingKVOTest.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = C126CF4418E22224008E9EF9 /* NetworkingKVOTest.1 */; };
+		C126CF4D18E22AA6008E9EF9 /* NSURLSessionTest.m in Sources */ = {isa = PBXBuildFile; fileRef = C126CF4C18E22AA6008E9EF9 /* NSURLSessionTest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,9 +29,11 @@
 /* Begin PBXFileReference section */
 		C126CF3A18E22224008E9EF9 /* NetworkingKVOTest */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = NetworkingKVOTest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C126CF3D18E22224008E9EF9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		C126CF4018E22224008E9EF9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C126CF4018E22224008E9EF9 /* main.m */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; tabWidth = 2; };
 		C126CF4318E22224008E9EF9 /* NetworkingKVOTest-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NetworkingKVOTest-Prefix.pch"; sourceTree = "<group>"; };
 		C126CF4418E22224008E9EF9 /* NetworkingKVOTest.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = NetworkingKVOTest.1; sourceTree = "<group>"; };
+		C126CF4B18E22AA6008E9EF9 /* NSURLSessionTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSURLSessionTest.h; sourceTree = "<group>"; };
+		C126CF4C18E22AA6008E9EF9 /* NSURLSessionTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSURLSessionTest.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +79,8 @@
 			isa = PBXGroup;
 			children = (
 				C126CF4018E22224008E9EF9 /* main.m */,
+				C126CF4B18E22AA6008E9EF9 /* NSURLSessionTest.h */,
+				C126CF4C18E22AA6008E9EF9 /* NSURLSessionTest.m */,
 				C126CF4418E22224008E9EF9 /* NetworkingKVOTest.1 */,
 				C126CF4218E22224008E9EF9 /* Supporting Files */,
 			);
@@ -142,6 +147,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C126CF4118E22224008E9EF9 /* main.m in Sources */,
+				C126CF4D18E22AA6008E9EF9 /* NSURLSessionTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,6 +261,7 @@
 				C126CF4A18E22224008E9EF9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
