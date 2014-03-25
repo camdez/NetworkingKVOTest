@@ -7,28 +7,7 @@
 //
 
 #import "NSURLSessionTest.h"
-
-@interface ActivityLogger : NSObject
-- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context;
-- (NSString *)nameForState:(NSURLSessionTaskState)state;
-@end
-
-@implementation ActivityLogger
-- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
-  NSLog(@"Change: %@ -> %@",
-        [self nameForState:[[change valueForKey:NSKeyValueChangeOldKey] integerValue]],
-        [self nameForState:[[change valueForKey:NSKeyValueChangeNewKey] integerValue]]);
-}
-
-- (NSString *)nameForState:(NSURLSessionTaskState)state {
-  return @{@(NSURLSessionTaskStateRunning):   @"running",
-           @(NSURLSessionTaskStateSuspended): @"suspended",
-           @(NSURLSessionTaskStateCanceling): @"canceling",
-           @(NSURLSessionTaskStateCompleted): @"completed"}[@(state)];
-}
-@end
-
-#pragma mark -
+#import "ActivityLogger.h"
 
 @implementation NSURLSessionTest
 

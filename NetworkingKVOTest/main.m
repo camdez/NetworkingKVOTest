@@ -8,13 +8,16 @@
 
 #import <Foundation/Foundation.h>
 #import "NSURLSessionTest.h"
+#import "AFNetworkingTest.h"
 
 int main(int argc, const char * argv[]) {
   @autoreleasepool {
     NSLog(@"Testing NSURLSession");
     [NSURLSessionTest run];
+
+    NSLog(@"Testing AFNetworking");
+    [AFNetworkingTest run];
   }
 
   return 0;
 }
-
